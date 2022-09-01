@@ -124,7 +124,8 @@
           <p class="form-hint">CVV/CVC</p>
           <p data-test-id="cvv-input-error"
              class="error-text form-hint"
-             *ngIf="formCtrls.cvv.errors?.required">
+             *ngIf="formCtrls.cvv.errors?.required ||
+                    formCtrls.cvv.errors?.minlength">
                 <span>
                   Invalid CVV/CVC
                 </span>
